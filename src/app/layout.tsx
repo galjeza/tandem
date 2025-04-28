@@ -3,11 +3,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+
 } from '@clerk/nextjs'
 import { Geist, Geist_Mono } from "next/font/google";
 
@@ -37,17 +33,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
+    <html lang="en" className={"dark"}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <header className="flex justify-end items-center p-4 gap-4 h-16">
-          <SignedOut>
-            <SignInButton />
-            <SignUpButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-        </header>
+       
           <TRPCReactProvider>{children}</TRPCReactProvider>
         </body>
       </html>
