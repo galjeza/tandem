@@ -2,27 +2,19 @@
 
 import * as React from "react"
 import {
-  IconCamera,
-  IconChartBar,
+  IconBell,
   IconDashboard,
-  IconDatabase,
-  IconFileAi,
-  IconFileDescription,
-  IconFileWord,
   IconFolder,
+  IconHeartbeat,
   IconHelp,
   IconInnerShadowTop,
-  IconListDetails,
-  IconReport,
   IconSearch,
   IconSettings,
-  IconUsers,
 } from "@tabler/icons-react"
 
-import { NavDocuments } from "~/components/nav-documents"
-import { NavMain } from "~/components/nav-main"
-import { NavSecondary } from "~/components/nav-secondary"
-import { NavUser } from "~/components/nav-user"
+import { NavMain } from "~/app/_components/nav-main"
+import { NavSecondary } from "~/app/_components/nav-secondary"
+import { NavUser } from "~/app/_components/nav-user"
 import {
   Sidebar,
   SidebarContent,
@@ -31,7 +23,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "~/components/ui/sidebar"
+} from "~/app/_components/ui/sidebar"
 
 const data = {
   user: {
@@ -46,70 +38,18 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Tickets",
+      title: "Alerts",
       url: "#",
-      icon: IconListDetails,
+      icon: IconBell,
     },
+  
     {
-      title: "Projects",
+      title: "Developer health",
       url: "#",
-      icon: IconChartBar,
-    },
-    {
-      title: "Team health",
-      url: "#",
-      icon: IconFolder,
-    },
- 
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: IconCamera,
-      isActive: true,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Proposal",
-      icon: IconFileDescription,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Prompts",
-      icon: IconFileAi,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
+      icon: IconHeartbeat,
     },
   ],
+  
 
   navSecondary: [
     {
