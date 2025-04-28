@@ -1,0 +1,24 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# API Architecture Guide
+
+This project uses tRPC for type-safe API communication between the client and server.
+
+## tRPC Setup
+- [src/trpc/server.ts](mdc:src/trpc/server.ts) - Server-side tRPC configuration
+- [src/trpc/react.tsx](mdc:src/trpc/react.tsx) - React hooks and providers for tRPC
+- [src/trpc/query-client.ts](mdc:src/trpc/query-client.ts) - React Query client configuration
+
+## API Routes
+The API routes are organized in the following structure:
+- `src/app/api/` - Next.js API routes
+- `src/server/` - Server-side business logic and procedures
+
+## Key Concepts
+1. tRPC provides end-to-end type safety for API calls
+2. React Query is used for data fetching and caching
+3. API routes follow the Next.js App Router conventions
+4. Server components can directly use server-side code without API calls

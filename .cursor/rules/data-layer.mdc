@@ -1,0 +1,24 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Data Layer Guide
+
+This project uses Prisma as the ORM with SQLite as the database.
+
+## Database Setup
+- [prisma/schema.prisma](mdc:prisma/schema.prisma) - Database schema definition
+- `prisma/db.sqlite` - SQLite database file
+
+## Key Concepts
+1. Prisma provides type-safe database access
+2. The schema defines the database structure and relationships
+3. Database migrations are managed through Prisma
+4. The database client is accessible through server-side code
+
+## Best Practices
+1. Always use Prisma's generated types for database operations
+2. Keep database operations in the server directory
+3. Use transactions for operations that modify multiple records
+4. Follow Prisma's naming conventions for models and fields

@@ -1,0 +1,58 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Frontend Architecture Guide
+
+This project uses Next.js App Router with React Server Components, Tailwind CSS for styling, and shadcn/ui for UI components.
+
+## Key Files
+- [src/styles/globals.css](mdc:src/styles/globals.css) - Global styles and Tailwind imports
+- [postcss.config.js](mdc:postcss.config.js) - PostCSS configuration for Tailwind
+- [src/app/_components/post.tsx](mdc:src/app/_components/post.tsx) - Example component implementation
+
+## Component Structure
+- `src/app/_components/` - Reusable components
+- `src/app/page.tsx` - Page components using the App Router
+- `src/app/layout.tsx` - Root and nested layouts
+
+## Styling Guidelines
+1. Use Tailwind CSS for all styling
+2. Follow the utility-first approach
+3. Use the following color scheme variables:
+   - `primary`
+   - `secondary`
+   - `accent`
+   - `background`
+   - `foreground`
+4. Maintain dark mode support using `dark:` variants
+
+## UI Components
+We use shadcn/ui components which are built on top of Radix UI:
+1. Import components from `@/components/ui/`
+2. Components are already styled with Tailwind and follow our theme
+3. All components support dark mode out of the box
+4. Customize components in their respective files under `components/ui/`
+
+## Next.js App Router Patterns
+1. Use Server Components by default
+2. Add `'use client'` directive only when needed for client interactivity
+3. Leverage React Suspense for loading states
+4. Use route groups `(group)` for organizational purposes
+5. Follow the nested layouts pattern for shared UI
+
+## Best Practices
+1. Keep components small and focused
+2. Use TypeScript for all components
+3. Maintain consistent naming:
+   - Pages: `page.tsx`
+   - Layouts: `layout.tsx`
+   - Components: `PascalCase.tsx`
+4. Use CSS variables for theme customization
+5. Implement responsive design using Tailwind breakpoints:
+   - `sm`: 640px
+   - `md`: 768px
+   - `lg`: 1024px
+   - `xl`: 1280px
+   - `2xl`: 1536px
